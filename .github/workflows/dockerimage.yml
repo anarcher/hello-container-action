@@ -1,9 +1,9 @@
-name: Docker Image CI
+name: Tag TEst
 
 on:
   push:
     tags: 
-      - *
+      - '*'
 jobs:
   build:
     runs-on: ubuntu-latest 
