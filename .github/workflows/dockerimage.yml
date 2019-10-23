@@ -1,4 +1,4 @@
-name: Tag TEst
+name: Tag Failure test
 
 on:
   push:
