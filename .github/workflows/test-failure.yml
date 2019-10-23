@@ -14,5 +14,6 @@ jobs:
     - name: Get the version
       id: get_version
       run: echo ::set-output name=VERSION::${GITHUB_REF/refs\/tags\//}
+    - run: echo "$(git describe --tag ${{ github.sha }})"
     - run: echo "${{ steps.get_version.outputs.VERSION }}" 
     - run: error
