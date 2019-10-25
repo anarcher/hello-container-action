@@ -1,0 +1,15 @@
+name: kz
+on:
+  push:
+    branches:
+    - "master"
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v1
+    - name: kz set image
+      uses: anarcher/kustomize-action@master
+      with:
+        path: ./k8s/
+        set_image: redis:${{ github.sha }}
