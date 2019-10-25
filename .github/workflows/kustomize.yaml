@@ -11,5 +11,5 @@ jobs:
     - name: kz set image
       uses: anarcher/kustomize-action@master
       with:
-        path: ./k8s/
+        path: ./kz/
         set_image: redis:${{ github.sha }}
